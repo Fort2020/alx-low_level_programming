@@ -6,9 +6,9 @@
 */
 int main(void)
 {
-	char "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char="and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	fwrite(2, ch, sizeof(ch));
+	cha(b, ch, sizeof(ch));
 
-	return (1);
+	Return (1);
 }
