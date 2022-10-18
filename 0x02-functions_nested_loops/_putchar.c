@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * main - prints '_putchar' in each new line
+ * main - prints char in each new line
  * Return: always 0
  */
 int main(void)
 {
-	_putchar('-');
+	_putchar('_');
 	_putchar('p');
 	_putchar('u');
 	_putchar('t');
