@@ -9,7 +9,7 @@ void print_times_table(int n)
 {
 	int a, b, st;
 
-	if (n >= 0 && n <= 25)
+	if (n >= 0, n <= 25)
 	{
 		for (a = 0; a <= n; a++)
 		{
