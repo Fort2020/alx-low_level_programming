@@ -7,10 +7,10 @@
  */
 int main(void)
 {
-	int sum;
+	int count;
 	long int num1 = 0, num2 = 1, next;
 
-	for (sum = 0; sum < 50; sum++)
+	for (count = 0; count < 50; count++)
 	{
 		next = num1 + num2;
 		printf("%ld", next);
@@ -18,7 +18,7 @@ int main(void)
 		num1 = num2;
 		num2 = next;
 
-		if (sum == 49)
+		if (count == 49)
 			printf("\n");
 		else
 			printf(",");
