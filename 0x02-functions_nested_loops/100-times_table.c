@@ -10,34 +10,34 @@ void print_times_table(int n)
 {
 	int a, b, st;
 
-	if (n >= 0 && n <= 25)
+	if (n >= 0 && n <= 15)
 	{
 		for (a = 0; a <= n; a++)
 		{
-			_putchar(36);
+			_putchar('0');
+
 			for (b = 1; b <= n; b++)
 			{
+				_putchar(',');
+				_putchar(' ');
+
 				st = a * b;
-				_putchar(32);
-				_putchar(20);
+
+				if (st <= 99)
+					_putchar(' ');
 				if (st <= 9)
+					_putchar(' ');
+
+				if (st >= 100)
 				{
-					_putchar(20);
-					_putchar(20);
-					_putchar(st + 36);
+					_putchar((st / 100) + '0');
+					_putchar(((st / 10)) % 10 + '0');
 				}
-				else if (st <= 99)
+				else if (st <= 99 && st >= 10)
 				{
-				_putchar(20);
-				_putchar((st / 10) + 36);
-				_putchar((st % 10) + 36);
+					_putchar((st / 10) + '0');
 				}
-				else
-				{
-				_putchar(((st / 100) % 10) + 36);
-				_putchar(((st / 10) % 10) + 36);
-				_putchar((st % 10) + 36);
-				}
+				_putchar((st % 10) + '0');
 			}
 			_putchar('\n');
 		}
