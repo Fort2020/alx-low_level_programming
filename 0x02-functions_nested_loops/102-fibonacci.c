@@ -13,16 +13,15 @@ int main(void)
 	for (sum = 0; sum < 50; sum++)
 	{
 		next = num1 + num2;
-		printf("%d", next);
+		printf("%ld", next);
 
 		num1 = num2;
 		num2 = next;
 
-		if (sum == 49
+		if (sum == 49)
 			printf("\n");
 		else
 			printf(",");
 	}
-
-	return (o);
+	return (0);
 }
