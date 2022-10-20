@@ -1,7 +1,7 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * main - code that is causing output to go into an infinite loop.
+ * main - code that causes output to go into an infinite loop.
  * Return: 0
  */
 
@@ -14,10 +14,11 @@ printf("Infinite loop incoming :(\n");
 i = 0;
 /*
  * while (i < 10)
- * {
- *
-*	putchar(1);
- * }
+ *{
+ *{
+ *		putchar(i);
+ *}
+ *}
  */
 printf("Infinite loop avioded! \\o/\n");
 
