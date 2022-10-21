@@ -2,6 +2,7 @@
 
 /**
  * print_triangle - prints a triangle, followed by a new line.
+ * using the # character
  * @size: the size of the triangle.
  */
 void print_triangle(int size)
@@ -13,13 +14,13 @@ void print_triangle(int size)
 		for (h = 1; h <= size; h++)
 		{
 			for (w = size - h; w > 0; w--)
-			_putchar(" ");
+				_putchar(" ");
 
 			for (w = 0; w < h; w++)
-			_putchar('#');
+				_putchar('#');
 
 			if (h == size)
-			continue;
+				continue;
 
 			_putchar('\n');
 		}
