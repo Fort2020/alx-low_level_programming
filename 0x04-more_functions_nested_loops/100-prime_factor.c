@@ -5,7 +5,7 @@
  * main - prints the largest prime number 612852475143,
  * followed by a new line.
  *
- * Return: always 0 (Success)
+ * Return: always 0
  */
 int main(void)
 {
@@ -16,6 +16,6 @@ int main(void)
 		while ((n % a == 0) && (n != a))
 			n = n / a;
 	}
-	printf("%d\n", n);
+	printf("%lu\", n);
 	return (0);
 }
