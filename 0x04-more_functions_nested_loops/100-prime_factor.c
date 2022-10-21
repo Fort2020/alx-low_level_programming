@@ -9,13 +9,21 @@
  */
 int main(void)
 {
-	unsigned long int a, n = 612852475143;
+	long prime = 612852475143, div;
 
-	for (a = 3; a < 514389; a = a + 2)
+	while (div < (prime / 2))
 	{
-		while ((n % a == 0) && (n != a))
-			n = n / a;
+		if ((prime % 2) == 0)
+		{
+			prime /= 2;
+			continue;
+		}
+		for (div = 3; div < (prime / 2); div += 2)
+		{
+			if ((prime % div) == 0)
+				prime /= div;
+		}
 	}
-	printf("%lu\", n);
+	printf("%ld\", prime);
 	return (0);
 }
