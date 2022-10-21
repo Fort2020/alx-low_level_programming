@@ -9,12 +9,12 @@
  */
 int main(void)
 {
-	long int s, t = 612852475143;
+	unsigned long int a, n = 612852475143;
 
-	for (s = 3; s < 51439; s = s + 2)
+	for (a = 3; a < 514389; a = a + 2)
 	{
-		while ((t % s == 0) && (t != s))
-			t = t / s;
+		while ((n % a == 0) && (n != a))
+			n = n / a;
 	}
 	printf("%d\n", n);
 	return (0);
