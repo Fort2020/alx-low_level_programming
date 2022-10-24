@@ -14,16 +14,14 @@ void print_rev(char *s)
 	i = 0;
 
 	while (s[i] != '\0')
-	{
-		i++
-	}
+		i++;
 
 	len = i;
 
 	for (t = len - i; t >= 0; t--)
 	{
-		_putchar(s[t]);
+		putchar(s[t]);
 	}
 
-	_putchar('\n');
+	putchar('\n');
 }
