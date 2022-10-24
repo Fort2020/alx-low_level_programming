@@ -2,23 +2,30 @@
 #include <stdio.h>
 
 /**
- * puts_half - prints half of a string
- * @str: the string to be printed
+ * puts_half - prints only the even numbers
+ * @str: as the main parameter
  */
 void puts_half(char *str)
 {
-	int i = 0, len = 0, n;
+	int i, len, n;
 
-	while (str[i++])
-		len++;
+	for (len = 0; str[len] != '\0'; len++)
+	{
+	}
 
 	if ((len % 2) == 0)
 		n = len / 2;
 	else
+
 		n = (len - 1) / 2;
+		n = (len + 1) / 2;
 
 	for (i = n; i < len; i++)
+	{
+		if (str[i] == ' ')
+			continue;
 		putchar(str[i]);
+	}
 
 	putchar('\n');
 }
