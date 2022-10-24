@@ -3,21 +3,20 @@
 
 /**
  * print_array - input num of array
- * @a: array
- * @n: elements to print
+ * @a: int to check
+ * @n: int to check
+ * Return: Always 0
  */
 void print_array(int *a, int n)
 {
-	int index;
+	int x;
 
-	for (index = 0; index < n; index++)
+	for (x = 0; x < n; x++)
 	{
-		printf("%d", a[index];
-
-		if (index == n - 1)
-		continue;
-
-		printf(",");
+		if (x != n - 1)
+		printf("%d, ", a[x]);
+		else
+			printf("%d", a[x]);
 	}
 
 	printf("\n")
