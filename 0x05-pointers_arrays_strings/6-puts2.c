@@ -2,21 +2,20 @@
 #include <stdio.h>
 
 /**
- * puts2 - prints charcter of a string
- * @str: string characters
- *
- * Return: always 0 (Success)
+ * puts2 - this function print only even numbers 
+ * @str: main character
+ * Return: always 0
  */
 void puts2(char *str)
 {
-	int index = 0;
+	int a = 0;
 
-	while (str[index] != 0)
+	while (str[a] != 0)
 	{
-		if ((str[index] % 2) == 0)
-		if ((index % 2) == 0)
-			putchar(str[index]);
-		index++;
+		if ((str[a] % 2) == 0)
+		if ((a % 2) == 0)
+			putchar(str[a]);
+		a++;
 	}
 	putchar('\n');
 }
