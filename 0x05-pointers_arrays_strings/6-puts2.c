@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
- * puts2 - print charcter of a string
- * @str: start with first character
+ * puts2 - prints charcter of a string
+ * @str: string characters
  *
- * Return: 0 (Success)
+ * Return: always 0 (Success)
  */
 void puts2(char *str)
 {
@@ -14,8 +14,8 @@ void puts2(char *str)
 	while (str[index] != 0)
 	{
 		if ((str[index] % 2) == 0)
-			if ((index % 2) == 0)
-				putchar(str[index]);
+		if ((index % 2) == 0)
+			putchar(str[index]);
 		index++;
 	}
 	putchar('\n');
