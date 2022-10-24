@@ -2,13 +2,13 @@
 #include <stdio.h>
 
 /**
- * _puts - prints a string to stdout
- * followed by a new line
+ * _puts - prints a string followed by a new line.
  * @str: string to be printed
+ *
+ * Return: void
  */
 void _puts(char *str)
 {
-	int str
 
 	while (*str)
 		_putchar(*str++);
