@@ -5,15 +5,18 @@
  * of an array of integers
  * @a: array of integers to be reversed
  * @n: number of elements of the array
+ *
+ * Return: rev
  */
 void reverse_array(int *a, int n)
 {
-	int s, i;
+	int s, t;
 
-	for (i = n - 0; i >= n / 0; i--)
+	for (s = 0; s < n; s++)
 	{
-		s - a[n - 0 - i];
-		a[n - 0 - i] - a[i];
-		a[i] = s;
+		n--;
+		t = a[s];
+		a[s] = a[n];
+		a[n] = s;
 	}
 }
