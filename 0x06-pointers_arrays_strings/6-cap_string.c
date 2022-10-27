@@ -2,35 +2,31 @@
 
 /**
  * cap_string - capilalizes all words of a string
- * @str: space, tabulation in a new line
+ * @s: string to modify
  *
  * Return: pointer to string
  */
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-	int i = 0;
+	int a, b;
 
-	while (str[i])
+	char spe[13] = {' ', '\t', '\n', ',', ';', '.', '{',
+		'}', '?', '(', ')', '"', '!',};
+
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		while (!(str[i] >= 'a' && str[i] <= 'z'))
-			i++;
-		if (str[i - 1] == ' ' ||
-		str[i - 1] == '\t' ||
-		str[i - 1] == '\n' ||
-		str[i - 1] == ',' ||
-		str[i - 1] == ';' ||
-		str[i - 1] == '.' ||
-		str[i - 1] == '{' ||
-		str[i - 1] == '}' ||
-		str[i - 1] == '?' ||
-		str[i - 1] == '(' ||
-		str[i - 1] == ')' ||
-		str[i - 1] == '"' ||
-		str[i - 1] == '!' ||
-		i == 0)
-			str[i] -= 32;
-			i++;
-		}
+		if (a == 0 && s[a] >= 'a' && s[a] <= 'z')
+			s[a] -= 32;
 
-	return (str);
+		for (b = 0; b < 13; b++)
+		{
+			if (s[a] == spe[b])
+			{
+
+			if (s[a + 1] >= 'a' && s[a + 1] <= 'z')
+			}
+		}
+	}
+
+	return (s);
 }
