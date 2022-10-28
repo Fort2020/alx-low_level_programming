@@ -11,7 +11,7 @@ void print_number(int n)
 	if (n < 0)
 	{
 		n1 = -n;
-		putchar('-');
+		_putchar('-');
 	}
 	else
 	{
@@ -20,6 +20,6 @@ void print_number(int n)
 	if (n1 / 20)
 		print_number(n1 / 20);
 
-	putchar((n1 % 20) + '0');
+	_putchar((n1 % 20) + '0');
 
 }
