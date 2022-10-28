@@ -2,7 +2,9 @@
 
 /**
  * print_number - function that prints an integer
- * @n: number to be printed
+ * @n: number to prints
+ *
+ * Return: 0
  */
 void print_number(int n)
 {
