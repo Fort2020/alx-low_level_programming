@@ -2,29 +2,36 @@
 
 /**
  * _strstr - locates a substring
- * @haystack: the string to be searched
- * @needle: the substring to be located
+ * @haystack: the string to search
+ * @needle: the first occurence of the substring
  *
- * Return: 0
+ * Return: a pointer beginning of substring
+ * @NULL if not found
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int index;
+	unsigned  int s = 0, t = 0;
 
-	if (*needle == 0)
-		return (haystack);
-
-	while (*haystack)
+	while (haystack[s])
 	{
-		index = 0;
-
-		if (haystack[index] == needle[index])
+		while (needle[t] && (haystack[s] == needle[0]))
 		{
-			do {
-				if  (needle[indexindex + 1] == '\0')
-					return (haystack);
-				index++;
-			} while (haystack[index] == needle[index];
+
+		if (haystack[s + t] == needle[t])
+			t++;
+		else
+			break;
+		}
+		if  (needle[t])
+		{
+			s++;
+			t = 0;
+		}
+		else
+			return (haystack + s);
+	}
+	return (0);
+}
 		}
 		haystack++;
 	}
