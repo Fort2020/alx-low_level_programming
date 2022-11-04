@@ -2,9 +2,9 @@
 int squareroot(int n, int i);
 
 /**
- * _sqrt_recursion - no loop, 1. 2nd function  - checks for perfect square
+ * _sqrt_recursion - checks for perfect square
  * @n: input
- * Return: 0 Always
+ * Return: Always 0
  */
 int _sqrt_recursion(int n)
 {
