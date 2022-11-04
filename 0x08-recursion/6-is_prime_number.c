@@ -12,10 +12,6 @@ int get_prime(int v, int p)
 		return (1);
 	else if (p % v == 0)
 		return (0);
-	{
-	else
-	}
-
 	return (get_prime(v + 1, p));
 }
 /**
