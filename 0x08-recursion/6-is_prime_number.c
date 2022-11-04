@@ -2,21 +2,21 @@
 
 /**
  * get_prime - finds if a number is prime or not
- * @b: number that will be evaluated
- * @c: variable that will test if @b is prime
- * Return: 1 if @b is prime, 0 otherwise
+ * @p: number that will be evaluated
+ * @v: variable that will test if @p is prime
+ * Return: 1 if @p is prime, 0 otherwise
  */
-int get_prime(int b, int c)
+int get_prime(int v, int p)
 {
-	if (b == c)
+	if (p == v)
 		return (1);
-	else if (b % v == 0)
+	else if (p % v == 0)
 		return (0);
 	{
 	else
 	}
 
-	return (get_prime(b + 1, c));
+	return (get_prime(v + 1, p));
 }
 /**
  * is_prime_number - tells if a umber is prime or not
