@@ -1,50 +1,38 @@
 #include <stdio.h>
-#include <string.h>
-#include <ctype.h>
 #include <stdlib.h>
 
 /**
- * checker - checks for valid input
- * @argc: count argument
- * @i: counter for argv[]
- * @j: counter for argv[][]
- * @argv: argument vector
- *
- * Return: 0 if true, 1 on failure
- */
-void _print_rev_recursion(char *s)
-int checker(int argc, int i, unsigned int j, char *argv[])
-{
-	if (*s)
-	{
-	for (i = 1; i <= argc; i++)
-		for (j = 0; argv[i] != '\0' && j < strlen(argv[i]); j++)
-	}
-			if (isdigit(argv[i][j]) == 0)
-				return (1);
-	return (0);
-}
-/**
- * main - add all arguments together if they are digits
+ * main - adds positive numbers
  * @argc: count arguments
  * @argv: arguments
  *
- * Return: 0 if true, 1 on failure
+ * Return: 0
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int result, i;
+	int i, n, sum = 0;
+	char *flag;
 
-	result = 0;
-	if (checker(argc, 1, 0, argv) == 1)
+	if (argc < 2)
 	{
-		_print_rev_recursion(s + 1);
-		_putchar(*s);
-		printf("Error\n");
-		return (1);
+		printf("0\n");
+		return (0);
 	}
-	for (i = 1; i < argc; i++)
-		result += atoi(argv[i]);
-	printf("%d\n", result);
+
+	for (i = 1; argv[i]; i++)
+	{
+		n = strtol(argv[i], &flag, 10);
+		if (*flag)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		else
+		{
+			sum += n;
+		}
+	}
+	printf("%d\n", sum);
+
 	return (0);
 }
