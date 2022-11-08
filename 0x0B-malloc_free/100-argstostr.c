@@ -3,50 +3,48 @@
 #include <stdio.h>
 
 /**
- * strtow - splits a string into separate words
- * @str: string to split into words
- * Return: array pointer
+ * argstostr - concatenates all the arguments of your program
+ * @ac: count arguments
+ * @av: arguments vector
+ *
+ * Return: pointer to a new string, or NULL if it fails
  */
-char **strtow(char *str)
+char *argstostr(int ac, char **av)
 {
-	char **ret, ptr = *str;
-	int wc = 0, i = 0;
+	char *str, *s;
+	int a, b, c, num = 0;
 
-	if (str == 0 || *str == 0)
-		return (0);
-	while (ptr)
-	{
-		if (!(*ptr == ' ') && (*(ptr + 1) == ' ' || *(ptr + 1) == 0))
-			wc++;
-		ptr++;
-	}
-	if (wc == 0)
+	if (ac == 0 || av == NULL)
 		return (NULL);
-	ret = malloc((wc + 1) * sizeof(char *));
-	if (ret == 0)
-		return (0);
-	while (*str)
+
+	for (a = 0; a < ac; a++)
 	{
-		if (*str != ' ')
-		{
-			for (ptr = str, wc = 0; *ptr != ' ' && *ptr != 0;)
-				wc++, ptr++;
-			ret[i] = malloc(wc + 1);
-			if (ret[i] == 0)
-			{
-				while (i >= 0)
-					free(ret[--i]);
-				free(ret);
-				return (0);
-			}
-			ptr = ret[i++];
-			while (*str != ' ' && *str != 0)
-				*ptr++ = *str++;
-			*ptr = 0;
-		}
-		else
-			str++;
+		s = av[a];
+		b = 0;
+
+		while (a[b++])
+			num++;
+		num++;
 	}
-	ret[i] = 0;
-	return (ret);
+
+	str = (char *)malloc(sizeof(char) * (num + 1));
+	if (str == NULL)
+		return (NULL);
+
+	for (a = 0, b = 0; a < ac && b < num; a++)
+	{
+		s = av[a];
+		c = 0;
+
+		while (s[c])
+		{
+			str[b] = s[c];
+			c++;
+			b++;
+		}
+		str[b++] = '\n';
+	}
+	str[b] = '\0';
+
+	return (str);
 }
