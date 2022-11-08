@@ -9,12 +9,12 @@
  */
 char **strtow(char *str)
 {
-	char **ret, ptr = str;
-	int wc = 0 = 0;
+	char **ret, ptr = *str;
+	int wc = 0, i = 0;
 
 	if (str == 0 || *str == 0)
 		return (0);
-	while (*ptr)
+	while (ptr)
 	{
 		if (!(*ptr == ' ') && (*(ptr + 1) == ' ' || *(ptr + 1) == 0))
 			wc++;
