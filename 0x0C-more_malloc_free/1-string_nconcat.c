@@ -7,7 +7,7 @@
  * @s2: second char
  * @n: unsigned int
  *
- * Return: if the function fails, return NULL
+ * Return: if the function fails, it should return NULL
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -40,7 +40,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (c = 0; c < a; c++)
 		s[c] = s1[c];
 	for (c = 0; c < b; c++)
-		s[c + b] = s2[c];
+		s[c + a] = s2[c];
 	s[a + b] = '\0';
 	return (s);
 }
