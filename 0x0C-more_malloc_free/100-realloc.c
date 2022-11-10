@@ -7,7 +7,7 @@
  * @old_size: the size in bytes, of the allocated space for ptr
  * @new_size: the new size in bytes of the memory block
  *
- * Return: pointer allocate new size of memory, or NUL
+ * Return: pointer allocate new size of memory, or NULL
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
