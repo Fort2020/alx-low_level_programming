@@ -2,6 +2,8 @@
 
 /**
  * thetortoiseAndtheHare - implementation of thetortoiseAndtheHare
+ *
+ * Return: always 0
  */
 void thetortoiseAndtheHare(void)
 {
