@@ -1,4 +1,4 @@
-#include "lists.h"
+#include <stdio.h>
 
 /**
  * tortoiseAndHare - Entry point
