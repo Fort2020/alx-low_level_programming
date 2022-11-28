@@ -3,7 +3,7 @@
 /**
  * listint_len - function that returns the number of elements
  * in a linked list
- *@h: head of a list
+ * @h: head of a list
  *
  * Return: the number of nodes
  */
