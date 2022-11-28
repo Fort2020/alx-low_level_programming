@@ -4,7 +4,7 @@
  * free_listint - function that frees a list
  * @head: head of the list
  *
- * Return: nothing
+ * Return: nothing.
  */
 void free_listint2(listint_t **head)
 {
