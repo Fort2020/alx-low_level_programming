@@ -5,7 +5,7 @@
  * and returns the head node's data n
  * @head: head of the list
  *
- * Return: the head of node's data
+ * Return: the head of node's data.
  */
 int pop_listint(listint_t **head)
 {
