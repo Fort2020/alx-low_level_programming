@@ -1,5 +1,25 @@
 #include "lists.h"
-#include <stdio.h>
+
+/**
+ * interval - checks if the linked list has not looped
+ * @begin: the beginning of the list
+ * @node: the current node
+ * @i: the interval that should be at the current position
+ *
+ * Return: 1 if interval is correct, 0 if there is a loop
+ */
+size_t interval(const listint_t *begin, const listint_t *node, size_t i)
+{
+	size_t check = 0;
+
+	while (begin != node)
+	{
+		begin = begin->next;
+		check++;
+	}
+
+	return ((check == i) ? 1 : 0);
+}
 
 /**
  * print_listint_safe - function that prints a linked list
@@ -9,44 +29,21 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *sl_p = head, *fs_p = head;
-	size_t i = 0;
-	int is_loop = 0;
+	size_t count = 0;
+	const listint_t *start = head;
 
-	while (sl_p && fs_p && fs_p->next)
+	if (head)
 	{
-		if (!(fs_p->next->next))
-			break;
-		sl_p = fs_p->next;
-		fs_p = fs_p->next->next;
-		if (sl_p == fs_p)
+		while (head && interval(begin, head, count))
 		{
-			sl_p = sl_p->next;
-			is_loop = 1;
-			break;
-		}
-	}
-	if (!is_loop)
-	{
-		while (head)
-		{
-			i++;
 			printf("[%p] %d\n", (void *)head, head->n);
 			head = head->next;
+
+			count++;
 		}
-		return (i);
+
+		if (head)
+			printf("-> [%p] %d\n", (void *)head, head->n);
 	}
-	while (head)
-	{
-		i++;
-		if (head == sl_p)
-		{
-			printf("[%p] %d\n", (void *)head, head->n);
-			printf("-> [%p] %d\n", (void *)head, head->next->n);
-			exit(98);
-		}
-		printf("[%p] %d\n", (void *)head, head->n);
-		head = head->next;
-	}
-	return (0);
+	return (count);
 }
