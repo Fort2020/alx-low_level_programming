@@ -3,7 +3,7 @@
 /**
  * delete_nodeint_at_index - function that deletes
  * the node at index of a linked list
- * @head: head of the list
+ * @head: pointer to the head of the list
  * @index: index of the list where the node is deleted
  *
  * Return: 1 if it succeeded, -1 if it failed
